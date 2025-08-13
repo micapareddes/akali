@@ -1,0 +1,55 @@
+export const runtime = 'edge';
+
+export async function GET() {
+  const tips = [
+'As vezes a vida é uma merda, e ta tudo bem.',
+'Se o erro é pequeno, conserte agora. Se é grande, escreva um plano.',
+'Não torne uma pequena tarefa em um problema.',
+'Escreva o que está pensando!',
+'Sua vida é sua responsabilidade.',
+'A maneira como alguém trata você é um reflexo de como essa pessoa se sente sobre si mesma.',
+'A vida é sobre gerenciar expectativas - principalmente as suas.',
+'Se você quer explorar uma nova habilidade, não apenas consuma informação.',
+'Não se ofenda com o que os outros dizem.',
+'Protetor solar de alta qualidade para o rosto vale a pena.',
+'Perdoe a si mesmo por ações passadas.',
+'Enquanto você viva, existirão problemas.',
+'Seja a ajuda que você gostaria de ter recebido quando mais precisou.',
+'O propósito da vida é experimentar coisas pelas quais você mais tarde sentirá nostalgia.',
+'Não importa quão boas ou ruins as coisas fiquem, elas vão mudar.',
+'Você pode aprender algo com todos, não importa quem sejam ou qual seja sua posição na vida.',
+'Só porque você não foi o primeiro a chegar lá, não significa que nunca chegará.',
+'Leia todos os dias.',
+'Conheça lugares e pessoas de diferentes culturas.',
+'Valorize as pessoas.',
+'Permita-se errar.',
+'Nunca pare de estudar.',
+'Curta mais a sua companhia.',
+'Cuide bem do seu corpo.',
+'Invista em você todos os dias.',
+'Crie tempo para as pessoas importantes da vida.',
+'Não acredite em tudo que você ouve, não gaste tudo o que você tem e durma tanto quanto você queira.',
+'Quando disser "Sinto muito", olhe para a pessoa nos olhos.',
+'Nunca ria dos sonhos de outra pessoa.',
+'Ame profundamente e com paixão. Você pode se machucar, mas é a única forma de viver a vida completamente.',
+'Em desentendimentos, brigue de forma justa. Não use palavrões.',
+'Não julgue pessoas pelos seus parentes.',
+'Quando alguém perguntar algo que você não quer responder, sorria e pergunte: "Por que você quer saber?".',
+'Seja grato!',
+'Seja humilde. Errou? Peça perdão.',
+'O tempo é relativo. Nunca é “tarde demais” para tentar, ou “cedo demais” para começar.',
+'Ficar zangado com as pessoas por cometerem erros não as ensina a não cometer erros, mas sim a escondê-los.',
+'Só porque você fez algo errado no passado, não significa que você não pode mudar de ideia.',
+'Aprenda a dizer não.',
+'Beba mais água.',
+'Não se compare com os outros.',
+'Seja gentil com estranhos.',
+'Aprenda a cozinhar uma boa refeição.',
+'Não tenha medo de pedir ajuda.'
+];
+  const tip = tips[Math.floor(Math.random() * tips.length)];
+  return new Response(JSON.stringify({ tip }), {
+    headers: { 'Content-Type': 'application/json' },
+    status: 200,
+  });
+}
